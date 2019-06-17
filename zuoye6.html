@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>img-float</title>
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .top{
+        background-color: #fff;
+        margin: 0 auto;
+    }
+    .top_1 span{
+        font-size: 12px;
+        position:absolute;
+        top:5px;
+        left:700px;
+        text-align: center;
+
+    }
+    #p1{
+        font-size: 14px;
+        display: inline-block;
+        position: absolute;
+        top:3px;
+        left:850px;
+        font-weight: bolder;
+    }
+    #p2{
+        font-size: 14px;
+        display: inline-block;
+        position: absolute;
+        top:3px;
+        left:920px;
+        font-weight: bolder;
+    }
+    .dingdan select{
+        border:0;
+        width:85px;
+        font-size: 14px;
+        display: inline-block;
+        position: absolute;
+        top:3px;
+        left:1000px;
+    }
+    .maicai select{
+        border:0;
+        width:85px;
+        font-size: 14px;
+        display: inline-block;
+        position: absolute;
+        top:3px;
+        left:1090px;
+    }
+    #p3{
+        font-size: 14px;
+        display: inline-block;
+        position: absolute;
+        top:3px;
+        left:1200px;
+    }
+    .img2{
+        position: absolute;
+        right:216px;
+        top:0px;
+    }
+    .img1{
+        position: absolute;
+        right:176px;
+        top:0px;
+    }
+    .logo{
+        position: absolute;
+        left:176px;
+        top:70px;
+    }
+    .fenlei select{
+        border:0;
+        font-weight: bolder;
+        position: absolute;
+        left:176px;
+        top:165px;
+        font-size: 14.78px;
+    }
+    .top_2 ul{
+        display: inline-block;
+        position: absolute;
+        float:left;
+        left:276px;
+        top:153px;
+    }
+    .text{
+        position: absolute;
+        right:340px;
+        top:70px;       
+        width:607px;
+        height:50px;
+        border:1px solid #373741;
+        color:#ededed;
+        font-size: 14.78px;
+        text-align: center;  
+    }
+    .s{
+        width:50px;
+        height:50px;
+        position: absolute;
+        top: 71px;
+        right:350px;
+        border-left: 2px solid #cccccc;
+    }
+    .s img{
+        margin: 5px 10px 5px 15px;
+    }
+    .top_2 ul li{
+        display: inline-block;
+        width: 70px;
+        font-size: 14.78px;
+        text-align: center;
+        padding-top: 15px;
+        list-style-type: none;
+        color: #000;
+        margin-left: 30px;
+        margin-right: 13px;
+    }
+    .top_2>ul li:hover{
+        color: #3aa747;
+        padding-bottom:10px;
+        border-bottom: 2px solid #3aa747;        
+    }
+    .che{
+        position: absolute;
+        right:176px;
+        top:80px;
+    }
+    .banner{
+        border-top: 2px solid #3aa747;
+        position:absolute;
+        top:200px;
+        width:100%;
+        height:670px;
+        background-image: url(pic/banner.png);
+        background-position: center;
+    }
+    #p4{
+        font-size: 15px;
+        position: absolute;
+        top:890px;
+        left:190px;
+    }
+    #p5{
+        position: absolute;
+        top:892px;
+        left:225px;
+        font-size: 12px;
+        color:#a9a8a8;
+    }
+    #p6{
+        position: absolute;
+        top:892px;
+        right:176px;
+        font-size:14px;
+        color:#a9a8a8;
+
+    }
+    .biao_4 p{
+        display:inline-block;
+        float:right;
+        position: absolute;
+        top:14px;
+        font-size:14px;
+        color:#737373;
+        right:30px;
+    }
+    .biao_2{
+        width:1170px;
+        height:45px;
+        border-top:1px solid #737373;
+        border-right:1px solid #737373;
+        border-left:1px solid #737373;
+        position:absolute;
+        top:930px;
+        left:176px;
+    }
+    .biao_2 ul li{
+        list-style-type:none;
+        display:inline-block;
+        width:100px;
+        height:45px;
+        line-height:45px;
+        text-align:center;
+        margin-right:15px;
+        color:#737373;
+        font-size: 16px;
+    }
+    .biao_3{
+        width:1170px;
+        height:45px;
+        border-top:1px solid #737373;
+        border-right:1px solid #737373;
+        border-left:1px solid #737373;
+        position:absolute;
+        top:976px;
+        left:176px;
+    }
+    .biao_3 ul li{
+        list-style-type:none;
+        display:inline-block;
+        width:100px;
+        height:45px;
+        line-height:45px;
+        text-align:center;
+        margin-right:15px;
+        color:#737373;
+        font-size: 16px;
+    }
+    .biao_4{
+        width:1170px;
+        height:45px;
+        border:1px solid #737373;
+        position:absolute;
+        top:1022px;
+        left:176px;
+    }
+    .biao_4 ul li{
+        list-style-type:none;
+        display:inline-block;
+        width:100px;
+        height:45px;
+        line-height:45px;
+        text-align:center;
+        margin-right:15px;
+        color:#737373;
+        font-size: 16px;
+    }
+    .l1{
+        background-color:#e5e5e5;
+        color:black;
+    }
+    #l2{
+        color:#71bb79;
+    }
+    #l3{
+        color:#71bb79;
+    }
+    .nav{
+        width:1200px;
+        height:620px;
+        margin: 0 auto;
+        background-color: #fff;
+        border:1px solid #fff;
+        position: absolute;
+        left:157px;
+        top:1120px;
+    }
+    .nav_1{
+        height:290px;
+        padding-left: 10px;
+        background-image: url(pic/img1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 253px;
+        float: left;
+        border:1px solid #e5e5e5;
+        margin: 0px 0px 30px 30px;
+        text-align: center;
+        position: relative;
+    }
+    .span_1{
+        width: 100%;
+        height:70px;
+        background-color: #454542;
+        position:absolute;
+        opacity:0.8;
+        top:220px;
+        left:0px;
+        color:#fff;
+        line-height: 30px;
+        font-size: 14.83px;
+    }
+    .hide_1{
+        height: 290px;
+        background-color: #454542;
+        color: #fff;
+        display: none;
+        position: absolute;
+        line-height: 40px;
+        left:0px;
+        bottom: 0;
+        width: 100%;
+        opacity:0.8;
+        font-size: 22.14px;
+    }
+    .hide_1 p{
+        position:relative;
+        top:90px;
+    }
+    .nav_1:hover .hide_1{
+        display: block;
+    }
+    .nav_1:hover .span_1{
+        display:none;
+    }
+    .nav_2{
+        height:290px;
+        padding-left: 10px;
+        background-image: url(pic/img2.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        width: 253px;
+        float: left;
+        border:1px solid #e5e5e5;
+        margin: 0px 0px 30px 30px;
+        text-align: center;
+        position: relative;
+    }
+    .span_2{
+        width: 100%;
+        height:70px;
+        background-color: #454542;
+        position:absolute;
+        opacity:0.8;
+        top:220px;
+        left:0px;
+        color:#fff;
+        font-size: 14.83px;
+        line-height: 30px;
+
+    }
+    .hide_2{
+        height: 290px;
+        background-color: #454542;
+        color: #fff;
+        display: none;
+        position: absolute;
+        line-height: 40px;
+        left:0px;
+        bottom: 0;
+        width: 100%;
+        opacity:0.8;
+        font-size: 22.14px;
+    }
+    .hide_2 p{
+        position:relative;
+        top:90px;
+    }
+    .nav_2:hover .hide_2{
+        display: block;
+    }
+    .nav_2:hover .span_2{
+        display:none;
+    }
+    .nav_3{
+        height:290px;
+        padding-left: 10px;
+        background-image: url(pic/img3.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 253px;
+        float: left;
+        border:1px solid #e5e5e5;
+        margin: 0px 0px 30px 30px;
+        text-align: center;
+        position: relative;
+    }
+    .span_3{
+        width: 100%;
+        height:70px;
+        background-color: #454542;
+        position:absolute;
+        opacity:0.8;
+        top:220px;
+        left:0px;
+        color:#fff;
+        font-size: 14.83px;
+        line-height: 30px;
+    }
+    .hide_3{
+        height: 290px;
+        background-color: #454542;
+        color: #fff;
+        display: none;
+        position: absolute;
+        line-height: 50px;
+        left:0px;
+        bottom: 0;
+        width: 100%;
+        font-size: 22.14px;
+        opacity:0.8;
+    }
+    .hide_3 p{
+        position:relative;
+        top:90px;
+    }
+    .nav_3:hover .hide_3{
+        display: block;
+    }
+    .nav_3:hover .span_3{
+        display:none;
+    }
+    .nav_4{
+        height:290px;
+        padding-left: 10px;
+        background-image: url(pic/img4.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 253px;
+        float: left;
+        border:1px solid #e5e5e5;
+        margin: 0px 0px 30px 30px;
+        text-align: center;
+        position: relative;
+    }
+    .span_4{
+        width: 100%;
+        height:70px;
+        background-color: #454542;
+        position:absolute;
+        opacity:0.8;
+        top:220px;
+        left:0px;
+        color:#fff;
+        font-size: 14.83px;
+        line-height: 30px;
+    }
+    .hide_4{
+        height: 290px;
+        background-color: #454542;
+        color: #fff;
+        display: none;
+        position: absolute;
+        line-height: 50px;
+        left:0px;
+        bottom: 0;
+        width: 100%;
+        opacity:0.8;
+        font-size: 22.14px;
+    }
+    .hide_4 p{
+        position:relative;
+        top:90px;
+    }
+    .nav_4:hover .hide_4{
+        display: block;
+    }
+    .nav_4:hover .span_4{
+        display:none;
+    }
+    .nav_5{
+        height:290px;
+        padding-left: 10px;
+        background-image: url(pic/img5.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 253px;
+        float: left;
+        border:1px solid #e5e5e5;
+        margin: 0px 0px 30px 30px;
+        text-align: center;
+        position: relative;
+    }
+    .span_5{
+        width: 100%;
+        height:70px;
+        background-color: #454542;
+        position:absolute;
+        opacity:0.8;
+        top:220px;
+        left:0px;
+        color:#fff;
+        font-size: 14.83px;
+        line-height: 30px;
+    }
+    .hide_5{
+        height: 290px;
+        background-color: #454542;
+        color: #fff;
+        display: none;
+        position: absolute;
+        line-height: 50px;
+        left:0px;
+        bottom: 0;
+        width: 100%;
+        font-size: 22.14px;
+        opacity:0.8;
+    }
+    .hide_5 p{
+        position:relative;
+        top:90px;
+    }
+    .nav_5:hover .hide_5{
+        display: block;
+    }
+    .nav_5:hover .span_5{
+        display:none;
+    }
+    .nav_6{
+        height:290px;
+        padding-left: 10px;
+        background-image: url(pic/img6.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 253px;
+        float: left;
+        border:1px solid #e5e5e5;
+        margin: 0px 0px 30px 30px;
+        text-align: center;
+        position: relative;
+    }
+    .span_6{
+        width: 100%;
+        height:70px;
+        background-color: #454542;
+        position:absolute;
+        opacity:0.8;
+        top:220px;
+        left:0px;
+        color:#fff;
+        font-size: 14.83px;
+        line-height: 30px;
+    }
+    .hide_6{
+        height: 290px;
+        background-color: #454542;
+        color: #fff;
+        display: none;
+        position: absolute;
+        line-height: 50px;
+        left:0px;
+        bottom: 0;
+        width: 100%;
+        opacity:0.8;
+        font-size: 22.14px;
+    }
+    .hide_6 p{
+        position:relative;
+        top:90px;
+    }
+    .nav_6:hover .hide_6{
+        display: block;
+    }
+    .nav_6:hover .span_6{
+        display:none;
+    }
+    .nav_7{
+        height:290px;
+        padding-left: 10px;
+        background-image: url(pic/img7.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 253px;
+        float: left;
+        border:1px solid #e5e5e5;
+        margin: 0px 0px 30px 30px;
+        text-align: center;
+        position: relative;
+    }
+    .span_7{
+        width: 100%;
+        height:70px;
+        background-color: #454542;
+        position:absolute;
+        opacity:0.8;
+        top:220px;
+        left:0px;
+        color:#fff;
+        font-size: 14.83px;
+        line-height: 30px;
+    }
+    .hide_7{
+        height: 290px;
+        background-color: #454542;
+        color: #fff;
+        display: none;
+        position: absolute;
+        line-height: 50px;
+        left:0px;
+        bottom: 0;
+        width: 100%;
+        opacity:0.8;
+        font-size: 22.14px;
+    }
+    .hide_7 p{
+        position:relative;
+        top:90px;
+    }
+    .nav_7:hover .hide_7{
+        display: block;
+    }
+    .nav_7:hover .span_7{
+        display:none;
+    }
+    .nav_8{
+        height:290px;
+        padding-left: 10px;
+        background-image: url(pic/img8.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 253px;
+        float: left;
+        border:1px solid #e5e5e5;
+        margin: 0px 0px 30px 30px;
+        text-align: center;
+        position: relative;
+    }
+    .span_8{
+        width: 100%;
+        height:70px;
+        background-color: #454542;
+        position:absolute;
+        opacity:0.8;
+        top:220px;
+        left:0px;
+        color:#fff;
+        font-size: 14.83px;
+        line-height: 30px;
+    }
+    .hide_8{
+        height: 290px;
+        background-color: #454542;
+        color: #fff;
+        display: none;
+        position: absolute;
+        line-height: 50px;
+        left:0px;
+        bottom: 0;
+        width: 100%;
+        opacity:0.8;
+        font-size: 22.14px;
+    }
+    .hide_8 p{
+        position:relative;
+        top:90px;
+    }
+    .nav_8:hover .hide_8{
+        display: block;
+    }
+    .nav_8:hover .span_8{
+        display:none;
+    }
+    .d1{
+        width:68px;
+        left:6px;
+        top:-30px;
+        position: relative;
+        border-top: 2px solid #575c5a;
+    }
+    #r1{
+        position: fixed;
+        top:200px;
+        right:0px;
+        height:102px;
+        width:80px;
+        background-color:#030a08;
+        padding-top:40px;
+        text-align:center;
+    }
+    #r2{
+        position: fixed;
+        top:307px;
+        right:0px;
+        height:102px;
+        width:80px;
+        background-color:#030a08;
+        padding-top:38px;
+        text-align:center;
+    }
+    #r3{
+        position: fixed;
+        top:414px;
+        right:0px;
+        height:100px;
+        width:80px;
+        background-color:#030a08;
+        padding-top:38px;
+        text-align:center;
+    }
+    #r4{
+        position: fixed;
+        top:519px;
+        right:0px;
+        height:100px;
+        width:80px;
+        background-color:#030a08;
+        padding-top:38px;
+        text-align:center;
+    }
+    #r5{
+        position: fixed;
+        top:621px;
+        right:0px;
+        height:80px;
+        width:80px;
+        background-color:#030a08;
+        padding-top:40px;
+        text-align:center;
+    }
+    .bottom{
+        height:100px;
+        background-color:#f5f5f5;
+        position: relative;
+        top:1900px;
+        left: 0px;
+    }
+    .bottom_1{
+        width:1200px;
+        margin: 0 auto;
+    }
+    #l4{
+        border-right: 1px solid #f5f5f5;
+    }
+    .bottom_1 ul li{
+        display:inline-block;
+        list-style-type:none;
+        width:284px;
+        height:55px;
+        margin-top: 25px;
+        border-right:1px solid #e0e0e0;
+        margin-right:7px;
+    }
+    .img3{
+        float:left;
+        margin-top:8px;
+        margin-left: 40px;        
+    }
+    .p7{
+        float:left;
+        margin-right: 85px;
+        margin-top:8px;
+        margin-left: 20px;
+        font-size:19px;
+    }
+    .p8{
+        float: left;
+        margin-right: 20px;
+        margin-top:0px;
+        margin-left: 20px;
+        font-size:13px;
+    }
+    .bottom_2{
+        background-color:#323232;
+        font-size: 14px;
+        color: #f5f5f5;
+        height:100px;
+        position: relative;
+        top:1900px;
+    }
+    .bottom_2 p{
+        text-align: center;
+        line-height: 50px;
+    }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="top_1">
+            <span>嘿，欢迎来买猜商城！</span>
+            <p id="p1">请登录</p>
+            <p id="p2">免费注册</p>
+            <div class="dingdan"><select name="dingdan"><option>我的订单</option></select></div>
+            <div class="maicai"><select name="maicai"><option>我的买猜</option></select></div>
+            <p id="p3">帮助中心</p>
+            <div class="img1"><img src="pic/wx.png" alt=""></div>
+            <div class="img2"><img src="pic/wb.png" alt=""></div>
+        </div>
+        <div class="top_2">
+            <div class="logo"><img src="pic/logo.png" alt=""></div>
+            <div class="search">
+                <input class="text" type="text" name="search" value="请输入搜索内容">
+                <div class="s"><img src="pic/search.png"></div>
+            </div>
+            <div class="che"><img src="pic/cart.png" alt=""></div>
+            <div class="fenlei"><select name="fenlei"><option>全部商品分类</option></select></div>
+            <ul>
+                <li>首页</li>
+                <li>名酒</li>
+                <li>茗茶</li>
+                <li>玉石</li>
+                <li>休闲食品</li>
+                <li>洗护用品</li>
+                <li>土特产</li>
+                <li>积分商城</li>
+                <li>抽奖游戏</li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner"></div>
+    <div class="biao_1">
+        <p id="p4">首页</p>
+        <p id="p5">>玉石</p>
+        <p id="p6">共200件相关产品</p>
+    </div>
+    <div class="biao_2">
+        <ul>
+            <li class="l1">玉石</li>
+            <li>白玉</li>
+            <li>碧玉</li>
+            <li>黄玉</li>
+            <li>和田玉</li>
+            <li id="l2">翡翠</li>
+            <li>绿松玉</li>
+            <li>墨玉</li>
+        </ul>
+    </div>
+    <div class="biao_3">
+        <ul>
+            <li class="l1">其它</li>
+            <li id="l3">吊坠</li>
+            <li>扳指</li>
+            <li>手镯</li>
+        </ul>
+    </div>
+    <div class="biao_4">
+        <ul>
+            <li class="l1">地区</li>
+            <li>北京</li>
+            <li>安徽</li>
+            <li>福建</li>
+            <li>内蒙古</li>
+            <li>宁夏</li>
+            <li>黑龙江</li>
+            <li>河北</li>
+        </ul>
+        <p>更多</p>
+    </div>
+    <div class="nav">
+        <div class="nav_1">
+            <div class="span_1">
+                <p>竞猜价： ￥ 399.00</p>
+                <p>翡翠千手观音吊坠</p>
+            </div>
+            <div class="hide_1">
+                <p>竞猜价： ￥ 399.00</p>
+                <p>翡翠千手观音吊坠</p>
+            </div>
+        </div>
+        <div class="nav_2">
+            <div class="span_2">
+                <p>竞猜价： ￥ 1980.00</p>
+                <p>翡翠龙凤吊坠</p>
+            </div>
+            <div class="hide_2">
+                <p>竞猜价： ￥ 1980.00</p>
+                <p>翡翠龙凤吊坠</p>
+            </div>
+        </div>
+        <div class="nav_3">
+            <div class="span_3">
+                <p>竞猜价： ￥ 199.00</p>
+                <p>翡翠花蕊吊坠</p>
+            </div>
+            <div class="hide_3">
+                <p>竞猜价： ￥ 199.00</p>
+                <p>翡翠花蕊吊坠</p>
+            </div>
+        </div>
+        <div class="nav_4">
+            <div class="span_4">
+                <p>竞猜价： ￥ 199.00</p>
+                <p>翡翠如意吊坠</p>
+            </div>
+            <div class="hide_4">
+                <p>竞猜价： ￥ 199.00</p>
+                <p>翡翠如意吊坠</p>
+            </div>
+        </div>
+        <div class="nav_5">
+            <div class="span_5">
+                <p>竞猜价： ￥ 99.00</p>
+                <p>翡翠婵吊坠</p>
+            </div>
+            <div class="hide_5">
+                <p>竞猜价： ￥ 99.00</p>
+                <p>翡翠婵吊坠</p>
+            </div>
+        </div>
+        <div class="nav_6">
+            <div class="span_6">
+                <p>竞猜价： ￥ 99.00</p>
+                <p>翡翠观音(浅色)吊坠</p>
+            </div>
+            <div class="hide_6">
+                <p>竞猜价： ￥ 99.00</p>
+                <p>翡翠观音(浅色)吊坠</p>
+            </div>
+        </div>
+        <div class="nav_7">
+            <div class="span_7">
+                <p>竞猜价： ￥ 199.00</p>
+                <p>翡翠平安扣(深色)吊坠</p>
+            </div>
+            <div class="hide_7">
+                <p>竞猜价： ￥ 99.00</p>
+                <p>翡翠平安扣(深色)吊坠</p>
+            </div>
+        </div>
+        <div class="nav_8">
+            <div class="span_8">
+                <p>竞猜价： ￥ 199.00</p>
+                <p>翡翠如意吊坠</p>
+            </div>
+            <div class="hide_8">
+                <p>竞猜价： ￥ 199.00</p>
+                <p>翡翠如意吊坠</p>
+            </div>
+        </div>        
+    </div>
+    <div class="bottom">
+      <div class="bottom_1">
+        <ul>
+            <li>
+                <div class="img3"><img src="pic/f1.png"/></div>
+                <p class="p7">资质认证</p>
+                <p class="p8">服务商100%实名认证</p>
+            </li>
+            <li>
+                <div class="img3"><img src="pic/f2.png"/></div>
+                <p class="p7">支付安全</p>
+                <p class="p8">明码标价支付及信息安全</p>
+            </li>
+            <li>
+                <div class="img3"><img src="pic/f3.png"/></div>
+                <p class="p7">保险赔付</p>
+                <p class="p8">为您提供担保赔付</p>
+            </li>
+            <li id="l4">
+                <div class="img3"><img src="pic/f4.png"/></div>
+                <p class="p7">售后无忧</p>
+                <p class="p8">服务出问题经理全程跟进</p>
+            </li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom_2">
+            <p>首页   |   工商代理   |   财务代记账   |   股权交易与变更   |   企业贷款   |   办公室租赁 </p>
+            <p>© 2017-2018 买猜商城有限公司 版权所有</p>
+    </div>
+    <div class="right">
+      <div id="r1"><img src="pic/cart1.png"></div>
+      <div id="r2"><div class="d1"></div><img src="pic/qq.png"></div>
+      <div id="r3"><div class="d1"></div><img src="pic/zuji.png"></div>
+      <div id="r4"><div class="d1"></div><img src="pic/erweima.png"></div>
+      <div id="r5"><div class="d1"></div><img src="pic/gotop.png"></div>
+    </div>
+</body>
+</html>
