@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>  
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="js/animate.js"></script>
+</head>
+<body>
+	<div class="box" id="box">
+		<div id="top">
+			<div id="pic"><img src="images/a15.png" alt=""></div>
+			<div id="txtDiv">
+				<div id="txt">[温馨提示]最近有不少不法分子在网上骗人，请大家注意！！！</div>
+			</div>
+		</div>
+		<div class="slider" id="slider">
+			<div class="slide"><img src="images/b5.png" alt=""></div>
+			<div class="slide"><img src="images/b1.png" alt=""></div>
+			<div class="slide"><img src="images/b2.png" alt=""></div>
+			<div class="slide"><img src="images/b3.png" alt=""></div>
+			<div class="slide"><img src="images/b4.png" alt=""></div>
+			<div class="slide"><img src="images/b5.png" alt=""></div>
+			<div class="slide"><img src="images/b1.png" alt=""></div>
+		</div>
+		<span id="left"><</span>
+		<span id="right">></span>
+		<ul class="nav" id="nav">
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript">
+	var box = document.getElementById("box");
+	var oNavlist = document.getElementById("nav").children;
+	var slider = document.getElementById("slider");
+	var left = document.getElementById("left");
+	var right = document.getElementById("right");
+	var index = 1;
+	var txt=document.getElementById("txt");
+	var cnt=540;
+	setInterval(function(){
+		txt.style.left=cnt+"px";
+		cnt--;
+		if(cnt==-430)
+		{
+			cnt=540;
+		}
+	},20)
+	var timer;
+	var isMoving = false;
+	function next() {
+		if(isMoving){
+			return;
+		}
+		isMoving = true;
+		index++;
+		navChange();
+		animate(slider,{left:-1200*index},function(){
+			if(index > 5){
+				slider.style.left = "-1200px";
+				index = 1;
+			}
+			isMoving = false;
+		});
+	}
+	function prev() {
+		if(isMoving){
+			return;
+		}
+		isMoving = true;
+		index--;
+		navChange();
+		animate(slider,{left:-1200*index},function(){
+			if(index === 0){
+				slider.style.left = -1200*5+"px";
+				index = 5;
+			}
+			isMoving = false;
+		});
+	}
+	var timer = setInterval(next,2000);
+	box.onmouseover = function(){
+		animate(left,{opacity:50});
+		animate(right,{opacity:50});
+		clearInterval(timer);
+	}
+	box.onmouseout = function(){
+		animate(left,{opacity:0});
+		animate(right,{opacity:0});
+		timer = setInterval(next,2000);
+	}
+	right.onclick = next;
+	left.onclick = prev;
+	for(var i = 0; i < oNavlist.length; i++) {
+		oNavlist[i].idx = i;
+		oNavlist[i].onclick = function() {
+			index = this.idx + 1;
+			navChange();
+			animate(slider,{left:-1200*index});
+		}
+	}
+	function navChange() {
+		for(var i = 0; i < oNavlist.length; i++){
+			oNavlist[i].className= "";	
+		}
+		if(index > 5){
+			oNavlist[0].className= "active";
+		}
+		else if(index === 0){
+			oNavlist[4].className = "active";	
+		}
+		else{
+			oNavlist[index-1].className= "active";	
+		}
+	}
+	var top = document.getElementById('top');
+	var txt = document.getElementById('txt');
+	var time = window.setInterval(function() {
+  		var curLeft = top.scrollLeft;
+  		top.scrollLeft = curLeft + 10;
+  		var newLeft = top.scrollLeft;
+  		if (curLeft === newLeft) { // 利用scrollLeft存在边界值，若累加前和累加后的值相等，就可以判断已经达到最大值
+    		top.scrollLeft = 0; 
+  		}
+	}, 100)
+</script>
+</html>
